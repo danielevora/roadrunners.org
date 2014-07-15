@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>South Coast Roadrunners</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" /> -->
+  <!-- <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> -->
+	<!-- <script src="/assets/styles.css"></script> -->
+
+ 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<!-- <%= csrf_meta_tags %> -->
+</head>
+<body>
+
+<%= render "shared/header" %>
+
+<%= content_for?(:content) ? yield(:content) : yield %>
+
+<%= render "shared/footer" %>
+
+</body>
+</html>

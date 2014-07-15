@@ -1,0 +1,7 @@
+== README
+
+This is the open source repo of http://roadrunners.org
+
+Originally written by Daniel Evora
+
+My first Ruby on Rails experience.

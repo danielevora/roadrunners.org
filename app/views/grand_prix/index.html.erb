@@ -1,0 +1,50 @@
+<script type="text/javascript">
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AgF3RXbmZJcbdHpRVjE2R2RSOFcxNHluR3JBdENiZmc&output=html';
+
+	$(document).ready( function() {
+		Tabletop.init({ key: public_spreadsheet_url,
+		                     callback: showInfo,
+		                     simpleSheet: true,
+		                     parseNumbers: true
+		                     
+		});
+	});
+
+  function showInfo(data, tabletop) {
+  	//tabletop.sheets("2014");
+  	var source = $("#handlebars-template").html();
+		var template = Handlebars.compile(source);
+  	
+  	//tabletop.model.toArray();
+    //alert("Successfully processed!");
+    //console.log(data);
+    
+    $.each( tabletop.sheets("2014").all(), function(i, cat) {
+    	console.log(cat);
+		  var html = template(cat);
+		  $("#grandprix").append(html);
+		});
+  }
+</script>
+
+<script id="handlebars-template" type="text/x-handlebars-template">
+		<li>{{details_2}}</li>
+</script>
+
+<style>
+ol li:first-child {
+    display: none;
+}
+ol > li:nth-child(2):after {
+	display: inline-block;
+	font-family: FontAwesome;
+	content: "\f091";
+}
+ol li:nth-of-type(1n+32) {display: none;}
+</style>
+
+<h1>Grand Prix</h1>
+
+<div class="column-3">
+	<ol id="grandprix"></ol>
+</div>

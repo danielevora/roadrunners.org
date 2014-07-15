@@ -1,0 +1,20 @@
+<!-- app/views/newsletters/index.html.erb -->
+<h1>Home#index</h1>
+<p>Find me in app/views/newsletters/index.html.erb</p>
+
+<strong>Newsletters:</strong> <br />
+<hr />
+<h2><%= @location %></h2>
+
+<hr />
+
+<%= @newsletters %>
+
+<hr />
+  <% @newsletters.each do |newsletter| %>
+		<%= newsletter %> <br />
+  <% end %>
+  
+<hr />
+
+<%= @trythis %>

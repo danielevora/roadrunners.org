@@ -1,0 +1,59 @@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1feUiRmNm-IBvRmjnuP9BuzJtEc7sJ7A&sensor=true">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: new google.maps.LatLng(-34.397, 150.644),
+      zoom: 8
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"),
+        mapOptions);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<section id="home-page-events">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+        <h1>Upcoming Events</h1>
+        <div class="row">
+        	<div class="col-sm-6">	
+  					<div id="map-canvas" style="height:300px;width:300px;"></div>
+        	</div>
+        	<div class="col-sm-6">
+        		<ul class="list-group" style="height:300px;width:300px;">
+      		 		<li class="list-group-item">Club Run - Back Bay Classic</li>
+	          		<li class="list-group-item">Club run - A Snail’s Pace Mission Viejo to Cook’s Corner & Hoka Shoe Testing</li>
+	          		<li class="list-group-item">Club race - Magic Shoe 5K</li>
+	          		<li class="list-group-item">Club race - Downtown Anaheim 5K</li>
+	          		<li class="list-group-item">SCRR Annual Banquet 2014</li>
+        		</ul>
+        	</div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-sm-offset-1 text-center">
+        <div class="i-circle">
+          <i class="fa fa-map-marker"></i>
+        </div>
+        <h2>Where We Run</h2>
+        <address>
+          <strong>Mondays @ 6:15pm</strong><br />
+          <a href="https://www.google.com/maps/place/14301+Yale+Ave/@33.7008163,-117.7771108,17z">Heritage Park</a><br />
+          14301 Yale Ave, Irvine
+        </address>
+        <address>
+          <strong>Thursdays @ 6:15pm</strong><br />
+          <a href="https://www.google.com/maps/place/13702+Jamboree+Rd/@33.7215672,-117.7898736,17z">Sports Authority</a><br />
+          13702 Jamboree Rd, Irvine
+        </address>
+        <address>
+          <strong>Saturdays @ 7:45am</strong><br />
+          Location varies, check <a href="/events">events</a>
+        </address>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+

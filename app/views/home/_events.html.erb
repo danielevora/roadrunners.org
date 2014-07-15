@@ -1,0 +1,51 @@
+<section id="home-page-events">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-7">
+				<h1>Upcoming Events</h1>
+				<div class="row">
+					<ul class="list-group">
+						<% @events.first(5).each do |event| %>
+							<li class="list-group-item">
+								<span class="date">
+									<p><script>document.write(moment('<%= event["start_time"] %>').format('DD'));</script><span><script>document.write(moment('<%= event["start_time"] %>').format('MMM'));</script></span></p>
+								</span>
+								<dl>
+									<dt><%= link_to event["name"], "https://www.facebook.com/events/" + event["id"] %></dt>
+									<dd><strong></strong> at <%= event["location"] %></dd>
+								</dl>
+							</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-4 col-sm-offset-1 text-center">
+				<div class="i-circle">
+					<i class="fa fa-map-marker"></i>
+				</div>
+				<h2>Where We Run</h2>
+				<address>
+					<strong>Mondays @ 6:15pm</strong>
+					<br />
+					<a href="https://www.google.com/maps/place/14301+Yale+Ave/@33.7008163,-117.7771108,17z">Heritage Park <i class="fa fa-external-link"></i></a>
+					<br />
+					14301 Yale Ave, Irvine
+				</address>
+				<address>
+					<strong>Thursdays @ 6:15pm</strong>
+					<br />
+					<a href="https://www.google.com/maps/place/13702+Jamboree+Rd/@33.7215672,-117.7898736,17z">Sports Authority <i class="fa fa-external-link"></i></a>
+					<br />
+					13702 Jamboree Rd, Irvine
+				</address>
+				<address>
+					<strong>Saturdays @ 7:45am</strong>
+					<br />
+					Location varies, check <a href="https://www.facebook.com/southcoastroadrunners/events">events <i class="fa fa-external-link"></i></a>
+				</address>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+

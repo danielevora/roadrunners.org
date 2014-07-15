@@ -1,0 +1,11 @@
+#config/google.yml
+
+default: &default
+  username: scrr.info@gmail.com #/evora
+  password: scrr1984
+
+development: 
+  <<: *default
+
+production:
+  <<: *default
