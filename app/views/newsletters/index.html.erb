@@ -1,20 +1,10 @@
 <!-- app/views/newsletters/index.html.erb -->
-<h1>Home#index</h1>
-<p>Find me in app/views/newsletters/index.html.erb</p>
+<h1>Newsletters</h1>
+<p>Check out our monthly newsletter! Many thanks go to Cathy for creating the newsletter, Amy for her advice column, Mike for his Grand Prix updates, Noreene for her recipes section and all the other contributors. Many of the articles may be online soon but for now they are only available in PDF format. </p>
 
-<strong>Newsletters:</strong> <br />
-<hr />
-<h2><%= @location %></h2>
-
-<hr />
-
-<%= @newsletters %>
-
-<hr />
-  <% @newsletters.each do |newsletter| %>
-		<%= newsletter %> <br />
-  <% end %>
-  
-<hr />
-
-<%= @trythis %>
+<% @newsletters.each do |newsletter| %>
+<dl class="dl-horizontal">
+	<dt><%= File.basename(newsletter, ".pdf") %></dt>
+	<dd><a href="/assets/<%= File.basename(newsletter) %>">Download PDF</a></dd>
+</dl>
+<% end %>

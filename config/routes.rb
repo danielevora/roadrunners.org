@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+SCRR::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
    get 'links' => 'pages#links'
    get 'safety' => 'pages#safety'
    get 'membership' => 'pages#membership'
-   
    get 'events' => 'events#index'
    
    #301 memberhip/dues.php
@@ -26,6 +25,8 @@ Rails.application.routes.draw do
    
    #301 from newsletter to newsletters
    get 'newsletters' => 'newsletters#index'
+   
+   
 
 
    
@@ -78,5 +79,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
+
 end
