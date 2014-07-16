@@ -5,9 +5,7 @@ gem 'certified'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-group :development do
-  gem 'sqlite3'
-end
+gem 'sqlite3'
 
 #gem 'rake', '~> 10.3.2'
 # Use SCSS for stylesheets
