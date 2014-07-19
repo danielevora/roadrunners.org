@@ -10,11 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery-2.1.0
-//= require jquery_ujs
-//= require holder.js
+// require jquery-2.1.1.min.js
+// require jquery_ujs
 //= require tabletop.js
 //= require handlebars-v1.3.0
+//= require holder.js
+//= require moment.js
+// require turbolinks
 
-//= require turbolinks
-#//= require_tree .
+// require_tree .

@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="./"><%= image_tag "scrr_logo.png", size: "260x90" %></a>
+			<%= link_to image_tag("scrr_logo.png", size: "260x90"), root_path, :class => 'navbar-brand' %>
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
@@ -44,7 +44,7 @@
 						</li>
 						<li class="divider-vertical"></li>
 						<li>
-							<a href="#events">Events</a>
+							<a href="/#events">Events</a>
 						</li>
 						<li class="divider-vertical"></li>
 						<li class="dropdown">
@@ -75,7 +75,7 @@
 									<a href="#" class="disabled">Order Gear</a>
 								</li>
 								<li>
-									<a href="#grand_prix">Grand Prix Standings <i class="fa fa-external-link"></i></a>
+									<a href="/#grand_prix">Grand Prix Standings <i class="fa fa-external-link"></i></a>
 								</li>
 								<li class="divider"></li>
 								<li>
@@ -99,6 +99,6 @@
 		</div>
 	</div>
 </nav>
-
+<div style="height: 2px;"></div>
 <div style="height: 8px; background-color: #003876;"></div>
 <div style="height: 4px; background-color: #FFF;"></div>
