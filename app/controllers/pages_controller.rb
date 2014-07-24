@@ -16,6 +16,8 @@ class PagesController < ApplicationController
     
   end
   
-  
+  def history
+    
+  end
   
 end

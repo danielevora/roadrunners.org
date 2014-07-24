@@ -21,8 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  database: rails
-  username: rails
-  password: 34ta3obgPh
+  <<: *default
+  database: db/production.sqlite3

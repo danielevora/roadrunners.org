@@ -2,7 +2,7 @@
 <h1>Newsletters</h1>
 <p>Check out our monthly newsletter! Many thanks go to Cathy for creating the newsletter, Amy for her advice column, Mike for his Grand Prix updates, Noreene for her recipes section and all the other contributors. Many of the articles may be online soon but for now they are only available in PDF format. </p>
 
-<% @newsletters.each do |newsletter| %>
+<% @newsletters.reverse().each do |newsletter| %>
 <dl class="dl-horizontal">
 	<dt><%= File.basename(newsletter, ".pdf") %></dt>
 	<dd><a href="/assets/<%= File.basename(newsletter) %>">Download PDF</a></dd>

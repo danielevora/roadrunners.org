@@ -1,23 +1,28 @@
-<a name="#events"></a>
+<a name="events"></a>
 <section id="home-page-events">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-7">
 				<h1>Upcoming Events</h1>
 				<div class="row">
-					<ul class="list-group">
-						<% @events.first(5).each do |event| %>
-							<li class="list-group-item">
-								<span class="date">
-									<p><script>document.write(moment('<%= event["start_time"] %>').format('DD'));</script><span><script>document.write(moment('<%= event["start_time"] %>').format('MMM'));</script></span></p>
-								</span>
-								<dl>
-									<dt><%= link_to event["name"], "https://www.facebook.com/events/" + event["id"] %></dt>
-									<dd><strong></strong> at <%= event["location"] %></dd>
-								</dl>
-							</li>
-						<% end %>
-					</ul>
+					<table class="table">
+						<tbody>
+							<% @events.first(5).each do |event| %>
+							<tr>
+								<td>
+									<span class="date-icon">
+										<p><script>document.write(moment('<%= event["start_time"] %>').format('DD'));</script><span><script>document.write(moment('<%= event["start_time"] %>').format('MMM'));</script></span></p>
+									</span>
+								</td>
+								<td>
+									<%= link_to event["name"], "https://www.facebook.com/events/" + event["id"] %><br />
+									<strong><script>document.write(moment('<%= event["start_time"] %>').format('h:mm a'));</script></strong> at <%= event["location"] %>
+								</td>
+							</tr>
+							<% end %>
+						</tbody>
+					</table>
+					<a href="https://www.facebook.com/southcoastroadrunners/events" class="btn btn-default btn-lg" role="button">View More <i class="fa fa-external-link"></i></a>
 				</div>
 			</div>
 			<div class="col-sm-4 col-sm-offset-1 text-center">
@@ -28,16 +33,16 @@
 				<address>
 					<strong>Mondays @ 6:15pm</strong>
 					<br />
-					<a href="https://www.google.com/maps/place/13702+Jamboree+Rd/@33.7215672,-117.7898736,17z">Sports Authority <i class="fa fa-external-link"></i></a>
+					<a href="https://www.google.com/maps/place/14301+Yale+Ave/@33.7008163,-117.7771108,17z">Heritage Park <i class="fa fa-external-link"></i></a>
 					<br />
-					13702 Jamboree Rd, Irvine
+					14301 Yale Ave, Irvine
 				</address>
 				<address>
 					<strong>Thursdays @ 6:15pm</strong>
 					<br />
-					<a href="https://www.google.com/maps/place/14301+Yale+Ave/@33.7008163,-117.7771108,17z">Heritage Park <i class="fa fa-external-link"></i></a>
+					<a href="https://www.google.com/maps/place/13702+Jamboree+Rd/@33.7215672,-117.7898736,17z">Sports Authority <i class="fa fa-external-link"></i></a>
 					<br />
-					14301 Yale Ave, Irvine
+					13702 Jamboree Rd, Irvine
 				</address>
 				<address>
 					<strong>Saturdays @ 7:45am</strong>
