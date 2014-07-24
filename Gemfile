@@ -34,7 +34,7 @@ gem 'koala', '~> 1.9.0'
 
 gem 'font-awesome-sass'
 gem 'rack', '~> 1.5.2'
-
+gem 'unicorn', :platform => :ruby
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
