@@ -74,10 +74,10 @@ dl {
 
 /* BOOTSTRAP 2 REVIVED */
 .divider-vertical {
-	height: 50px;
+	/*height: 90px;
 	margin: 0 9px;
 	border-left: 1px solid #F2F2F2;
-	border-right: 1px solid #CCC;
+	border-right: 1px solid #CCC;*/
 }
 
 /* BOOTSTRAP OVERRIDES */
@@ -92,18 +92,26 @@ body {
   margin-bottom:0;
   min-height:0;
 }
+
 .navbar-inverse, .navbar-default {
   border-color:#003876;
 }
 
-.navbar-brand{
-	/*position:absolute;*/
+.navbar-nav > li > a {
+	padding-top:30px;
+	padding-bottom:30px;
+	line-height:30px;
 }
+	
+.navbar-brand {
+	min-height:90px;
+	padding: 0;
+}
+
 
 .nav-bar .brand,
 .nav-bar .nav > li > a {
   color:#FFF;
-  /*padding: 15px 20px;*/
 }
 
 .nav-bar .nav > li > .divider-vertical {
@@ -112,12 +120,10 @@ body {
 
 .nav > li > a {
   color:#FFF;
-  /*padding: 15px 20px;*/
 }
 
 .nav > li > a:hover {
   color:#428bca;
-  /*padding: 15px 20px;*/
 }
 
 .navbar-default .navbar-nav>li>a:hover{
@@ -133,7 +139,6 @@ body {
 }
 
 .carousel-caption{
-	/*background-color:#003876;*/
 	padding:10px;
 	border-radius:10px;
 	margin:0;

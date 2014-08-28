@@ -1,102 +1,100 @@
 <nav class="navbar navbar-default" role="navigation">
-	<div class="container">
-		<div class="col-sm-3">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 			<%= link_to image_tag("scrr_logo.png", size: "260x90"), root_path, :class => 'navbar-brand' %>
-		</div>
-		<div class="col-sm-9">
-			<div class="row">
-				<div class="col-sm-12">
-					<ul class="nav navbar-nav navbar-right">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Forum <b class="caret"></b></a>
+					<ul class="dropdown-menu">
 						<li>
-							<a href="http://www.facebook.com/southcoastroadrunners"><%= image_tag "facebook_logo.png" %></a>
+							<a href="http://discuss.roadrunners.org/category/races">Races</a>
 						</li>
 						<li>
-							<a href="http://www.twitter.com/scrr"><%= image_tag "twitter_logo.png" %></a>
+							<a href="http://discuss.roadrunners.org/category/training">Training</a>
 						</li>
 						<li>
-							<a href="http://sports.groups.yahoo.com/group/southcoastroadrunners/"><%= image_tag "yahoo_logo.png" %></a>
+							<a href="http://discuss.roadrunners.org/category/injury-prevention">Injury Prevention</a>
+						</li>
+						<li>
+							<a href="http://discuss.roadrunners.org/category/shoes-gadgets-apparel">Shoes, Gadgets & Apparel</a>
 						</li>
 					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<ul class="nav navbar-nav pull-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Forum <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="http://discuss.roadrunners.org/category/races">Races</a>
-								</li>
-								<li>
-									<a href="http://discuss.roadrunners.org/category/training">Training</a>
-								</li>
-								<li>
-									<a href="http://discuss.roadrunners.org/category/injury-prevention">Injury Prevention</a>
-								</li>
-								<li>
-									<a href="http://discuss.roadrunners.org/category/shoes-gadgets-apparel">Shoes, Gadgets & Apparel</a>
-								</li>
-							</ul>
-						</li>
-						<li class="divider-vertical"></li>
+				</li>
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="/#events">Events</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="/safety">Safety</a></li>
+						<li class="divider"></li>
 						<li>
-							<a href="/#events">Events</a>
+							<a href="http://www.runnersworld.com/tools/calculators">Pace Calculator</a>
 						</li>
-						<li class="divider-vertical"></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="/safety">Safety</a></li>
-								<li class="divider"></li>
-								<li>
-									<a href="http://www.runnersworld.com/tools/calculators">Pace Calculator</a>
-								</li>
-								<li>
-									<a href="http://www.attackpoint.org/trainingpaces.jsp">VDOT Calculator</a>
-								</li>
-							</ul>
-						</li>
-						<li class="divider-vertical"></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Membership <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="/membership">Join Our Team</a>
-								</li>
-								<li>
-									<a href="#" class="disabled">Order Gear</a>
-								</li>
-								<li>
-									<a href="/#grand_prix">Grand Prix Standings <i class="fa fa-external-link"></i></a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="/newsletters">Newsletter</a>
-								</li>
-								<li>
-									<a href="/about">About Us</a>
-								</li>
-								<li>
-									<a href="https://www.facebook.com/southcoastroadrunners/photos_stream?tab=photos_stream">Photos</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a href="/history">Leadership & Award Winners</a>
-								</li>
-							</ul>
+						<li>
+							<a href="http://www.attackpoint.org/trainingpaces.jsp">VDOT Calculator</a>
 						</li>
 					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Membership <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="/membership">Join Our Team</a>
+						</li>
+						<li>
+							<a href="#" class="disabled">Order Gear</a>
+						</li>
+						<li>
+							<a href="/#grand_prix">Grand Prix Standings <i class="fa fa-external-link"></i></a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="/newsletters">Newsletter</a>
+						</li>
+						<li>
+							<a href="/about">About Us</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/southcoastroadrunners/photos_stream?tab=photos_stream">Photos</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="/history">Leadership & Award Winners</a>
+						</li>
+					</ul>
+				</li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <!-- LEFT SIDE OPTION -->
+      </form>
+      <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+				<li>
+					<a href="http://www.facebook.com/southcoastroadrunners"><%= image_tag "facebook_logo.png" %></a>
+				</li>
+				<li>
+					<a href="http://www.twitter.com/scrr"><%= image_tag "twitter_logo.png" %></a>
+				</li>
+				<li>
+					<a href="http://sports.groups.yahoo.com/group/southcoastroadrunners/"><%= image_tag "yahoo_logo.png" %></a>
+				</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 <div style="height: 2px;"></div>
 <div style="height: 8px; background-color: #003876;"></div>
