@@ -11,20 +11,32 @@
 	});
 
   function showInfo(data, tabletop) {
-  	//tabletop.sheets("2014");
   	var source = $("#handlebars-template").html();
 		var template = Handlebars.compile(source);
-  	
-  	//tabletop.model.toArray();
-    //alert("Successfully processed!");
-    //console.log(data);
+		
+		var sheetYearName = calculateSheetYear();
     
-    $.each( tabletop.sheets("2014").all(), function(i, cat) {
+    //TODO: Remove hardcoded year using sheetYearName
+    $.each(tabletop.sheets("2015").all(), function(i, cat) {
     	console.log(cat);
 		  var html = template(cat);
 		  $("#grandprix").append(html);
 		});
   }
+  
+  function calculateSheetYear() {
+		var now = moment();
+		var month = new Date().getMonth()
+		var year = new Date().getFullYear()
+		 
+		//new season starts each July! Therefore update in August
+		if(month > 7) {
+			year++;
+		}
+		
+		return year;
+  }
+  
 </script>
 
 <script id="handlebars-template" type="text/x-handlebars-template">
