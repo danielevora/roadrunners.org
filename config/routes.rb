@@ -8,6 +8,7 @@ SCRR::Application.routes.draw do
       get :links
       get :safety
       get :membership
+      get :newsletters
      end
     end
    
