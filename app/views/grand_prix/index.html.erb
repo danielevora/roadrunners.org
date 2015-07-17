@@ -1,5 +1,5 @@
 <script type="text/javascript">
-	var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AgF3RXbmZJcbdHpRVjE2R2RSOFcxNHluR3JBdENiZmc&output=html';
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1IaIIS4LQrc2-V01TcKGGGsKQd9awI3XMvsNkya1ZW9U/pubhtml';
 
 	$(document).ready( function() {
 		Tabletop.init({ key: public_spreadsheet_url,
@@ -17,7 +17,7 @@
 		var sheetYearName = calculateSheetYear();
     
     //TODO: Remove hardcoded year using sheetYearName
-    $.each(tabletop.sheets("Current").all(), function(i, cat) {
+    $.each(tabletop.sheets(sheetYearName).all(), function(i, cat) {
     	console.log(cat);
 		  var html = template(cat);
 		  $("#grandprix").append(html);
