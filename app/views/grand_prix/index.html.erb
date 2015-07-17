@@ -17,7 +17,7 @@
 		var sheetYearName = calculateSheetYear();
     
     //TODO: Remove hardcoded year using sheetYearName
-    $.each(tabletop.sheets("2015").all(), function(i, cat) {
+    $.each(tabletop.sheets("Current").all(), function(i, cat) {
     	console.log(cat);
 		  var html = template(cat);
 		  $("#grandprix").append(html);
