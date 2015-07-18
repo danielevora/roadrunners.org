@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1IaIIS4LQrc2-V01TcKGGGsKQd9awI3XMvsNkya1ZW9U/pubhtml';
 
 	$(document).ready( function() {
@@ -16,9 +16,8 @@
 		
 		var sheetYearName = calculateSheetYear();
     
-    //TODO: Remove hardcoded year using sheetYearName
     $.each(tabletop.sheets(sheetYearName).all(), function(i, cat) {
-    	console.log(cat);
+    	//console.log(cat);
 		  var html = template(cat);
 		  $("#grandprix").append(html);
 		});
@@ -26,14 +25,15 @@
   
   function calculateSheetYear() {
 		var now = moment();
-		var month = new Date().getMonth()
-		var year = new Date().getFullYear()
+		var day = new Date().getDay();
+		var month = new Date().getMonth();
+		var year = new Date().getFullYear();
 		 
-		//new season starts each July! Therefore update in August
-		if(month > 7) {
+		//new season starts each July! Updates every July 11
+		if(month > 7 && day > 10) {
 			year++;
 		}
-		
+		console.log(year);
 		return year;
   }
   
@@ -59,4 +59,4 @@ ol li:nth-of-type(1n+32) {display: none;}
 
 <div class="column-3">
 	<ol id="grandprix"></ol>
-</div>
+</div> -->

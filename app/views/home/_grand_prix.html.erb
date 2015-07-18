@@ -22,7 +22,7 @@
 </section>
 
 <script type="text/javascript">
-	var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AgF3RXbmZJcbdHpRVjE2R2RSOFcxNHluR3JBdENiZmc&output=html';
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1IaIIS4LQrc2-V01TcKGGGsKQd9awI3XMvsNkya1ZW9U/pubhtml';
 
 	$(document).ready( function() {
 		Tabletop.init({ key: public_spreadsheet_url,
@@ -45,21 +45,19 @@
   }
 
   function calculateSheetName() {
-		var month = new Date().getMonth()
-		var year = new Date().getFullYear()
+		var sheetName = moment().year();
 		 
-		//new season starts each July! Therefore update in August
-		if(month > 7) {
-			year = year + 1;
+		//new season starts each July! Updates every July 11
+		if(moment().month() >= 6 && moment().date() >= 10) {
+			sheetName++;
 		}
-		
-		return year;
+		return sheetName;
   }
   
 </script>
 
 <script id="handlebars-template" type="text/x-handlebars-template">
-		<li>{{details_2}}</li>
+		<li>{{Name}}</li>
 </script>
 
 <style>
