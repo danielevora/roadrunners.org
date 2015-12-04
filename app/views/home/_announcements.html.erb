@@ -4,38 +4,41 @@
     <div class="row">
       <div class="col-sm-4 text-center">
         <div class="i-circle">
-          <i class="fa fa-tree"></i>
+          <i class="fa fa-tree" style="color:green;"></i>
         </div>
         <h2>Register Here</h2>
+        <% if Time.now() < Date.new(2016,1,12) %>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="S9CLG63K8E5NW">
-			<div><input type="hidden" name="on0" value="Attendees">Attendee Type:</div>
-			<div>
-				<select name="os0">
-					<option value="Individual">Individual $25.00 USD</option>
-					<option value="Couple">Couple $50.00 USD</option>
-				</select>
-			</div>
-			<br />
-			<div><input type="hidden" name="on1" value="Name(s) of attendee(s)">Name(s) of attendee(s)</div>
-			<div><input type="text" name="os1" maxlength="200"></div>
-			<div>
-				<input type="hidden" name="currency_code" value="USD">
-				<input style="padding-top: 5px;" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</div>
-		</form>
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="S9CLG63K8E5NW">
+					<div><input type="hidden" name="on0" value="Attendees">Attendee Type:</div>
+					<div>
+						<select name="os0">
+							<option value="Individual">Individual $25.00 USD</option>
+							<option value="Couple">Couple $50.00 USD</option>
+						</select>
+					</div>
+					<br />
+					<div><input type="hidden" name="on1" value="Name(s) of attendee(s)">Name(s) of attendee(s)</div>
+					<div><input type="text" name="os1" maxlength="200"></div>
+					<div>
+						<input type="hidden" name="currency_code" value="USD">
+						<input style="padding-top: 5px;" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</div>
+				</form>
+				<% else %>
+					<p>Holiday party registration has ended. Sorry!</p>
+				<% end %>
       </div>
       <div class="col-sm-offset-1 col-sm-7">
-        <h1>Holiday Party</h1>
+        <h1><span style="color:red;font-weight: bold;">Holiday Party</span></h1>
         <div>
-			<p>Join us for our annual post holiday & white elephant gift exchange party!</p>
-			<p>$25 per person</p>
-			<p>Pay online using the form to the left, or by cash or check payable to SCRR given to any board member.</p>
-			<p><strong>Must RSVP with payment by Monday, January 12</strong></p>
-			<p>To participate in the White Elephant Gift Exchange, please bring a gift valued around $20.</p>
-			<p>Price includes soft drinks, buffet, and dessert. Buffet includes assorted pizzas (works, spicy pepperoni, BBQ chicken, tomato basil and lasagna), house salad with dressing, and assorted sandwiches.</p>
+					<p>Join us for our annual post holiday & white elephant gift exchange party!</p>
+					<p><strong>&raquo;&raquo; Must RSVP with $25 payment by January 12! &laquo;&laquo;</strong></p>
+					<p>To participate in the White Elephant Gift Exchange, please bring a gift valued around $20.</p>
+					<p>Price includes Italian buffet of antipasti, Caesar salad, and entree choice of Rigatoni, Bolognese, or Penne Primavera Marinara</p>
+					<p>&#8592; Pay online using the form to the left, or by cash or check payable to SCRR given to any board member.</p>
         </div>
       </div>
     </div>
