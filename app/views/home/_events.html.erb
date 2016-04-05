@@ -30,7 +30,8 @@
 					<i class="fa fa-map-marker"></i>
 				</div>
 				<h2>Where We Run</h2>
-				<!-- SUMMER 
+				<% if Date.today.month() >= 4 && Date.today.month() <= 8 %>
+					<!-- SUMMER -->	
 					<address>
 						<strong>Mondays @ 6:15pm</strong>
 						<br />
@@ -38,31 +39,32 @@
 						<br />
 						11385 Pioneer Rd, Tustin
 					</address> 
-				-->
-				<!-- WINTER -->
+				<% else %>
+					<!-- WINTER -->
+						<address>
+						<strong>Mondays @ 6:15pm</strong>
+						<br />
+						<a href="https://www.google.com/maps/place/13702+Jamboree+Rd/@33.7215672,-117.7898736,17z" target="_blank">Sports Authority <i class="fa fa-external-link"></i></a>
+						<br />
+						13702 Jamboree Rd, Irvine
+						<br />
+						<em style="color:#000;font-weight: 500;">**Meet <strong>inside</strong> by the footwear department**</em>
+					</address>
+				<% end %>
 					<address>
-					<strong>Mondays @ 6:15pm</strong>
-					<br />
-					<a href="https://www.google.com/maps/place/13702+Jamboree+Rd/@33.7215672,-117.7898736,17z" target="_blank">Sports Authority <i class="fa fa-external-link"></i></a>
-					<br />
-					13702 Jamboree Rd, Irvine
-					<br />
-					<em style="color:#000;font-weight: 500;">**Meet <strong>inside</strong> by the footwear department**</em>
-				</address> 
-				<address>
-					<strong>Thursdays @ 6:15pm</strong>
-					<br />
-					<a href="https://www.google.com/maps/place/14301+Yale+Ave/@33.7008163,-117.7771108,17z" target="_blank">Heritage Park <i class="fa fa-external-link"></i></a>
-					<br />
-					14301 Yale Ave, Irvine
-					<br />
-					<em>**Meet <strong>outside</strong> in front of the community center**</em>
-				</address>
-				<address>
-					<strong>Saturday Mornings</strong>
-					<br />
-					Location varies, check <a href="https://www.facebook.com/southcoastroadrunners/events" target="_blank">events <i class="fa fa-external-link"></i></a>
-				</address>
+						<strong>Thursdays @ 6:15pm</strong>
+						<br />
+						<a href="https://www.google.com/maps/place/14301+Yale+Ave/@33.7008163,-117.7771108,17z" target="_blank">Heritage Park <i class="fa fa-external-link"></i></a>
+						<br />
+						14301 Yale Ave, Irvine
+						<br />
+						<em>**Meet <strong>outside</strong> in front of the community center**</em>
+					</address>
+					<address>
+						<strong>Saturday Mornings</strong>
+						<br />
+						Location varies, check <a href="https://www.facebook.com/southcoastroadrunners/events" target="_blank">events <i class="fa fa-external-link"></i></a>
+					</address>
 				<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#newbieModal">First Time Visitor</button>
 			</div>
 		</div>
